@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <!-- <bean id="empBean" class="com.training.org.Employee">
+    <property name="empId" value="101"></property>
+     <property name="name" value="Eshan"></property>
+      <property name="salary" value="200000"></property>
+    
+   
+    </bean> --> 
+     <bean id="address" class="com.training.org.Address">
+   <property name="lane" value="12"></property>
+    <property name="state" value="hyd"></property>
+     <property name="city" value="telengana"></property>
+    </bean> 
+    <bean id="roles" class="com.training.org.Role">
+   <property name="role" value="manager"></property>
+    </bean> 
+    <bean id="paymentDetails" class="com.training.org.PaymentDeatils">
+   <property name="paymentDetails" value="done"></property>
+    </bean> 
+    <bean id="customerType" class="com.training.org.CustomerType">
+   <property name="customerType" value="premium"></property>
+    </bean> 
+     <bean id="bookable" class="com.training.org.Bookable">
+   <property name="bookable" value="cricket"></property>
+    </bean> 
+       <bean id="Customer" class="com.training.org.Customer">
+        <property name="email" value="12"></property>
+         <property name="padssword" value="12"></property>
+          <property name="phoneNumber" value="12"></property>
+           <property name="adress" ref=""></property>
+            <property name="verified" ref="boolean"></property>
+             <property name="roles">
+             <list>
+             <ref bean="role"/>
+             </list>
+             </property>
+              <property name="forename" value="lohit"></property>
+               <property name="surename" value="reddy"></property>
+                <property name="paymentDetails" value="paymentDetails"></property>
+                 <property name="favorites" >
+                 <list>
+                  <ref bean="bookable"/>
+                 </list>
+                 </property>
+                  <property name="customerType" ref="customerType"></property>
+   
+    
+   
+    </bean> 
+     
+</beans> 
